@@ -10,6 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var numberLabel: UILabel!
+    
+    var numberedCell: String?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let numberedCell = numberedCell {
+            numberLabel?.text = numberedCell
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
